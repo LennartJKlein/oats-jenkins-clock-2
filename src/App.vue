@@ -49,7 +49,7 @@ export default {
     });
 
     const isNight = computed(() => {
-      return oatsHrs.value < 6 || oatsHrs.value > 16;
+      return oatsHrs.value < 5 || oatsHrs.value > 15;
     });
 
     return {
