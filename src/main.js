@@ -8,7 +8,7 @@ const app = createApp(App);
 app.use(createPinia());
 
 app.use(VueGtag, {
-  config: { id: "G-T6PBHR1LFS" },
+  config: { id: "G-0XVDJ5VXB5" },
   params: {
     anonymize_ip: true,
   },
