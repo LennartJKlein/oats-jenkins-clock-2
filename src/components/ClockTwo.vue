@@ -75,7 +75,7 @@ $breakpoint-md: 900px;
   position: absolute;
   right: 0;
   top: 0;
-  transform: scale(0.9);
+  transform: scale(0.88);
   width: 100vw;
 
   @media (min-width: $breakpoint-sm) {
