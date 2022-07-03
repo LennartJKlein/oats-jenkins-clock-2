@@ -5,7 +5,7 @@
       <a href="https://github.com/LennartJKlein/oats-jenkins-clock-2"
         ><img class="credits__github" src="./assets/github-icon.svg"
       /></a>
-      - Concept by
+      &#8212; Concept by
       <a href="https://www.youtube.com/watch?v=iHK-aN3XZqw">Oats Jenkins</a>
     </p>
   </div>
@@ -96,6 +96,10 @@ export default {
   &__github {
     margin-bottom: -0.25em;
     width: 1.25em;
+
+    .is-night & {
+      filter: invert(1);
+    }
   }
 }
 </style>
