@@ -1,16 +1,12 @@
 # Clock 2
 
-This template should help get you started developing with Vue 3 in Vite.
+An idea of Oats Jenkins, brought to life so you can check what time it is!
 
-## Recommended IDE Setup
+## Site
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+[https://clock-two.netlify.app/](https://clock-two.netlify.app/)
 
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
+## Development
 
 ```sh
 npm install
