@@ -29,13 +29,23 @@ export default {
     requestAnimationFrame(getTime);
 
     const oatsHrs = computed(() => {
-      return Math.trunc(secsToday.value / 4320) || 0;
+      return secsToday.value / 4320 || 0;
+    });
+    const oatsHrsTrunc = computed(() => {
+      return Math.trunc(oatsHrs.value);
     });
     const oatsMins = computed(() => {
-      return Math.trunc((secsToday.value - oatsHrs.value * 4320) / 216) || 0;
+      return (secsToday.value - oatsHrsTrunc.value * 4320) / 216 || 0;
+    });
+    const oatsMinsTrunc = computed(() => {
+      return Math.trunc(oatsMins.value);
     });
     const oatsSecs = computed(() => {
-      return secsToday.value - oatsHrs.value * 4320 - oatsMins.value * 216 || 0;
+      return (
+        secsToday.value -
+          oatsHrsTrunc.value * 4320 -
+          oatsMinsTrunc.value * 216 || 0
+      );
     });
 
     const isNight = computed(() => {

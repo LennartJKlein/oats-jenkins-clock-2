@@ -18,8 +18,12 @@
       xlink:href="../assets/hand-minutes.png"
     />
     <text class="clock__digital" x="50%" y="54.5%" text-anchor="middle">
-      {{ oatsHrs + 1 }}:{{ String(oatsMins + 1).padStart(2, "0") }}:{{
-        String(oatsSecs + 1).padStart(3, "0")
+      {{
+        Math.trunc(oatsHrs + 1)
+      }}:{{
+        String(Math.trunc(oatsMins + 1)).padStart(2, "0")
+      }}:{{
+        String(Math.trunc(oatsSecs + 1)).padStart(3, "0")
       }}
     </text>
   </svg>
