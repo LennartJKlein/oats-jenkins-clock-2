@@ -10,7 +10,14 @@ export default defineConfig({
     vue(),
     VitePWA({
       registerType: "autoUpdate",
-      includeAssets: ["favicon.ico", "icon-low.png", "icon-high.png"],
+      includeAssets: [
+        "favicon.ico",
+        "apple-touch-icon.png",
+        "safari-pinned-tab.svg",
+        "mstile-150x150.png",
+        "favicon-16x16.png",
+        "favicon-32x32.png",
+      ],
       manifest: {
         name: "Clock 2 - Oats Jenkins",
         short_name: "clock-2",
@@ -19,18 +26,13 @@ export default defineConfig({
         theme_color: "#ffffff",
         icons: [
           {
-            src: "icon-low.png",
-            sizes: "48x48",
-            type: "image/png",
-          },
-          {
-            src: "icon-med.png",
+            src: "/android-chrome-192x192.png",
             sizes: "192x192",
             type: "image/png",
           },
           {
-            src: "icon-high.png",
-            sizes: "512x512",
+            src: "/android-chrome-384x384.png",
+            sizes: "384x384",
             type: "image/png",
           },
         ],
