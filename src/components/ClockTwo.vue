@@ -61,8 +61,8 @@ $breakpoint-sm: 600px;
 $breakpoint-md: 900px;
 
 .clock {
-  $aspect-ratio-h: (1122 / 858) * 100;
-  $aspect-ratio-w: (858 / 1122) * 100;
+  $aspect-ratio-h: 1.3077 * 100;
+  $aspect-ratio-w: 0.7647 * 100;
   aspect-ratio: 1122 / 858;
   background: url("../assets/background.png") no-repeat center center;
   background-size: contain;
