@@ -21,28 +21,33 @@ export default {
     ClockTwo,
   },
   setup() {
-    let secsToday = ref();
+    let millSecsToday = ref();
     const getTime = function () {
-      secsToday.value = moment().diff(moment().startOf("day"), "seconds");
+      millSecsToday.value = moment().diff(
+        moment().startOf("day"),
+        "milliseconds"
+      );
       requestAnimationFrame(getTime);
     };
     requestAnimationFrame(getTime);
 
     const oatsHrs = computed(() => {
-      return secsToday.value / 4320 || 0;
+      return millSecsToday.value / 1000 / 4320 || 0;
     });
     const oatsHrsTrunc = computed(() => {
       return Math.trunc(oatsHrs.value);
     });
     const oatsMins = computed(() => {
-      return (secsToday.value - oatsHrsTrunc.value * 4320) / 216 || 0;
+      return (
+        (millSecsToday.value / 1000 - oatsHrsTrunc.value * 4320) / 216 || 0
+      );
     });
     const oatsMinsTrunc = computed(() => {
       return Math.trunc(oatsMins.value);
     });
     const oatsSecs = computed(() => {
       return (
-        secsToday.value -
+        millSecsToday.value / 1000 -
           oatsHrsTrunc.value * 4320 -
           oatsMinsTrunc.value * 216 || 0
       );
