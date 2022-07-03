@@ -8,6 +8,10 @@
   --vt-c-black-soft: #222222;
   --vt-c-black-mute: #282828;
 
+  --vt-c-blue: #3115e5;
+  --vt-c-blue-soft: #76a2f4;
+  --vt-c-blue-mute: #887fc5;
+
   --vt-c-indigo: #2c3e50;
 
   --vt-c-divider-light-1: rgba(60, 60, 60, 0.29);
@@ -31,6 +35,8 @@
 
   --color-heading: var(--vt-c-text-light-1);
   --color-text: var(--vt-c-text-light-1);
+  --color-description: var(--vt-c-text-light-2);
+  --color-link: var(--vt-c-blue);
 }
 
 .is-night {
@@ -43,6 +49,8 @@
 
   --color-heading: var(--vt-c-text-dark-1);
   --color-text: var(--vt-c-text-dark-2);
+  --color-description: var(--vt-c-text-dark-1);
+  --color-link: var(--vt-c-blue-soft);
 }
 
 *,
@@ -63,6 +71,7 @@ body {
   font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
     Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   font-size: 15px;
+  text-align: center;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
