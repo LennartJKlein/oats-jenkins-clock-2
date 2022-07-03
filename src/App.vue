@@ -80,7 +80,7 @@ export default {
   color: var(--color-description);
   position: absolute;
   height: 2em;
-  bottom: 0.25em;
+  top: 0.25em;
   margin: 0 auto;
   padding: 0.25em 0.4em;
 
