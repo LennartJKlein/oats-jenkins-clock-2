@@ -1,6 +1,7 @@
 # Clock 2
 
-An idea of Oats Jenkins, brought to life so you can check what time it is!
+An idea of Oats Jenkins, brought to life𓅱
+Easy to use ans check what time it is!
 
 ## Site
 
