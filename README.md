@@ -1,4 +1,4 @@
-# Clock 2
+# CLOCK 2
 
 An idea of Oats Jenkins, brought to life𓅱
 Easy to use when you want to check what time it is!
