@@ -19,8 +19,8 @@ export default defineConfig({
         "favicon-32x32.png",
       ],
       manifest: {
-        name: "Clock 2 - Oats Jenkins",
-        short_name: "clock-2",
+        name: "CLOCK 2 - Oats Jenkins",
+        short_name: "CLOCK 2",
         description:
           "See what time it is on the improved clock of Oats Jenkins.",
         theme_color: "#ffffff",
