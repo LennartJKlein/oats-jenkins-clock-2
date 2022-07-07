@@ -1,12 +1,34 @@
 <template>
-  <div :class="{ screen: true, 'is-night': isNight }">
+  <div
+    :class="{
+      screen: true,
+      'is-night': isNight,
+      'is-iframe': isIframe,
+    }"
+  >
     <ClockTwo :hrs="oatsHrs" :mins="oatsMins" :secs="oatsSecs" />
     <p class="credits">
-      <a href="https://github.com/LennartJKlein/oats-jenkins-clock-2"
-        ><img class="credits__github" src="./assets/github-icon.svg"
+      <span class="credits__concept">
+        Concept by
+        <a
+          class="credits__concept-label"
+          href="https://www.youtube.com/watch?v=iHK-aN3XZqw"
+          target="_blank"
+          >Oats Jenkins</a
+        >
+      </span>
+      <a
+        class="credits__code"
+        href="https://github.com/LennartJKlein/oats-jenkins-clock-2"
+        target="_blank"
+        ><img class="credits__code-icon" src="./assets/icon-github.svg"
       /></a>
-      &#8212; Concept by
-      <a href="https://www.youtube.com/watch?v=iHK-aN3XZqw">Oats Jenkins</a>
+      <a
+        class="credits__source"
+        href="https://clock-two.netlify.app/"
+        target="_blank"
+        ><img class="credits__source-icon" src="./assets/icon-fullscreen.svg"
+      /></a>
     </p>
   </div>
 </template>
@@ -57,11 +79,14 @@ export default {
       return oatsHrs.value < 5 || oatsHrs.value > 15;
     });
 
+    const isIframe = window.self !== window.top || false;
+
     return {
       oatsHrs,
       oatsMins,
       oatsSecs,
       isNight,
+      isIframe,
     };
   },
 };
@@ -69,37 +94,4 @@ export default {
 
 <style lang="scss">
 @import "./assets/base.scss";
-
-.screen {
-  background-color: var(--color-background);
-  display: flex;
-  place-items: center;
-  flex-direction: column;
-  height: 100vh;
-  width: 100vw;
-  overflow: hidden;
-}
-
-.credits {
-  background-color: var(--color-background);
-  color: var(--color-description);
-  position: absolute;
-  height: 2em;
-  top: 0.25em;
-  margin: 0 auto;
-  padding: 0.25em 0.4em;
-
-  a {
-    color: var(--color-link);
-  }
-
-  &__github {
-    margin-bottom: -0.25em;
-    width: 1.25em;
-
-    .is-night & {
-      filter: invert(1);
-    }
-  }
-}
 </style>
