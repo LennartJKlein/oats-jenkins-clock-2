@@ -13,7 +13,7 @@ Easy to use when you want to check what time it is!
 2. Go to the Plugins page in Wordpress
 3. Click 'Add plugin' > 'Upload plugin' and upload the .zip file
 4. Go to the Widgets page in Wordpress
-5. Search for "CLOCK 2" and insert the widget in the area of your preference
+5. Place the "CLOCK 2" widget in the area of your preference
 
 You can provide a heading and choose to hide or show the border around the clock.
 
