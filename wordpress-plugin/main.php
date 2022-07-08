@@ -17,40 +17,59 @@ class clock_two extends WP_Widget {
             // Base ID of the widget
             'clock_two', 
             // Name of widget in the UI
-            __('CLOCK 2', 'clock_two_border'), 
+            __('CLOCK 2', 'clock_two'), 
             // Widget description
             array(
-                'description' => __('CLOCK 2', 'clock_two_border')
+                'description' => __('CLOCK 2', 'clock_two')
             )
         );
+
+        wp_enqueue_style('clock-two', plugin_dir_url(__FILE__) . 'clock-two.css');
     }
     
     // Widget front-end
     public function widget($args, $instance) {
-        wp_enqueue_style('clock-two', plugin_dir_url(__FILE__) . 'clock-two.css');
-        echo $args['before_widget'];
+        $title = apply_filters('widget_title', $instance['title']);
+        extract($args);
+        echo $before_widget;
+        if ($title) echo $before_title . $title . $after_title;
         ?>
-        <div class="clock-two <?php echo $instance['border'] ? 'has-border' : ''; ?>">
+        <div class="clock-two <?php echo $instance['border'] == 'on' ? 'has-border' : ''; ?>">
             <iframe class="clock-two__iframe" src="https://clock-two.netlify.app/" title="CLOCK 2"></iframe>
         </div>
         <?php
-        echo $args['after_widget'];
+        echo $after_widget;
     }
     
     // Widget back-end
     public function form($instance) {
-        $border = isset($instance['border']) ? $instance['border'] : false;
+        $defaults = array(
+            'title' => __('', 'clock_two'), 
+            'border' => __('', 'off')
+        );
+        $instance = wp_parse_args((array) $instance, $defaults);
         ?>
         <p>
+            <label for="<?php echo $this->get_field_id('title'); ?>">
+                Title (optional):
+            </label>
             <input
-                class="checkbox"
+                class="widefat"
+                id="<?php echo $this->get_field_id('title'); ?>"
+                name="<?php echo $this->get_field_name('title'); ?>"
+                type="text"
+                value="<?php echo esc_attr($instance['title']); ?>"
+            />
+        </p>
+        <p>
+            <input
                 id="<?php echo $this->get_field_id('border');?>"
                 name="<?php echo $this->get_field_name('border');?>"
                 type="checkbox"
-                <?php echo $border ? 'checked="checked"' : '';?>
+                <?php echo checked($instance['border'], 'on'); ?>
             />
             <label for="<?php echo $this->get_field_id('border');?>">
-                <?php _e('Show border?'); ?>
+                Show border?
             </label>
         </p>
         <?php
@@ -58,8 +77,9 @@ class clock_two extends WP_Widget {
     
     // Updating widget replacing old instances with new
     function update($new_instance, $old_instance) {
-        $new_instance = array_map('strip_tags', $new_instance);
-        $instance = wp_parse_args($new_instance, $old_instance);
+        $instance = $old_instance;
+        $instance['title'] = strip_tags($new_instance['title']);
+        $instance['border'] = $new_instance['border'];
         return $instance;
     }
 }
