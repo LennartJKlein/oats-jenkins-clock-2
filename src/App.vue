@@ -23,12 +23,6 @@
         target="_blank"
         ><img class="credits__code-icon" src="./assets/icon-github.svg"
       /></a>
-      <a
-        class="credits__source"
-        href="https://clock-two.netlify.app/"
-        target="_blank"
-        ><img class="credits__source-icon" src="./assets/icon-fullscreen.svg"
-      /></a>
     </p>
   </div>
 </template>

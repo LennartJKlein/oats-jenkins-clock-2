@@ -107,6 +107,10 @@ body {
 
       .is-iframe & {
         opacity: 0.5;
+
+        @media (max-width: 400px) {
+          display: none;
+        }
       }
     }
   }
