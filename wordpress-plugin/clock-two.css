@@ -1,0 +1,27 @@
+.clock-two {
+  aspect-ratio: 5/4;
+  box-sizing: border-box;
+  max-height: 80vh;
+  min-height: 200px;
+  position: relative;
+  width: 100%;
+}
+
+.clock-two.has-border {
+  border: solid 2px #dddddd;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.clock-two__iframe {
+  border: 0;
+  bottom: 0;
+  box-sizing: border-box;
+  height: 100%;
+  left: 0;
+  outline: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+}
