@@ -21,13 +21,13 @@
         class="credits__code"
         href="https://github.com/LennartJKlein/oats-jenkins-clock-2"
         target="_blank"
-        ><img class="credits__code-icon" src="./assets/icon-github.svg"
+        >App by <img class="credits__code-icon" src="./assets/icon-github.svg"
       /></a>
       <a
         class="credits__source"
         href="https://clock-two.netlify.app/"
         target="_blank"
-        ><img class="credits__source-icon" src="./assets/icon-fullscreen.svg"
+      ><img class="credits__source-icon" src="./assets/icon-fullscreen.svg"
       /></a>
     </p>
   </div>
