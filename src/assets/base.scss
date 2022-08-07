@@ -98,6 +98,10 @@ body {
   &__code {
     display: flex;
 
+    &-label {
+      margin-left: 0.25em;
+    }
+
     &-icon {
       width: 1.75em;
 
