@@ -17,12 +17,15 @@
           >Oats Jenkins</a
         >
       </span>
-      <a
-        class="credits__code"
-        href="https://github.com/LennartJKlein/oats-jenkins-clock-2"
-        target="_blank"
-        >App by <img class="credits__code-icon" src="./assets/icon-github.svg"
-      /></a>
+      <span class="credits__code">
+        App by
+        <a
+          class="credits__code-label"
+          href="https://github.com/LennartJKlein/oats-jenkins-clock-2"
+          target="_blank"
+          ><img class="credits__code-icon" src="./assets/icon-github.svg"
+        /></a>
+      </span>
       <a
         class="credits__source"
         href="https://clock-two.netlify.app/"
