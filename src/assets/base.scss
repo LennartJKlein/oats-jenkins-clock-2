@@ -85,6 +85,7 @@ body {
   background-color: var(--color-background);
   color: var(--color-description);
   display: flex;
+  line-height: 1;
   margin: 0 auto;
   padding: 0.25em 0.4em;
   position: absolute;
@@ -103,7 +104,7 @@ body {
     }
 
     &-icon {
-      line-height: 1;
+      height: 1.75em;
       width: 1.75em;
 
       .is-night & {
@@ -112,10 +113,12 @@ body {
 
       .is-iframe & {
         opacity: 0.5;
+      }
+    }
 
-        @media (max-width: 400px) {
-          display: none;
-        }
+    .is-iframe & {
+      @media (max-width: 400px) {
+        display: none;
       }
     }
   }
