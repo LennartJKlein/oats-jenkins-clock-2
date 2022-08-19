@@ -96,7 +96,22 @@ body {
     color: var(--color-link);
   }
 
+  &__concept {
+    align-items: center;
+    display: flex;
+    margin-right: 0.75em;
+
+    &-label {
+      margin-left: 0.25em;
+    }
+
+    .is-iframe & {
+      display: none;
+    }
+  }
+
   &__code {
+    align-items: center;
     display: flex;
 
     &-label {
@@ -117,9 +132,7 @@ body {
     }
 
     .is-iframe & {
-      @media (max-width: 400px) {
-        display: none;
-      }
+      display: none;
     }
   }
 
@@ -139,19 +152,6 @@ body {
 
     .is-iframe & {
       display: flex;
-    }
-  }
-
-  &__concept {
-    display: flex;
-    margin-right: 0.75em;
-
-    &-label {
-      margin-left: 0.25em;
-    }
-
-    .is-iframe & {
-      display: none;
     }
   }
 }
