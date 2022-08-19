@@ -35,7 +35,12 @@ class clock_two extends WP_Widget {
         if ($title) echo $before_title . $title . $after_title;
         ?>
         <div class="clock-two <?php echo $instance['border'] == 'on' ? 'has-border' : ''; ?>">
-            <iframe class="clock-two__iframe" src="https://clock-two.netlify.app/" title="CLOCK 2"></iframe>
+            <iframe
+                class="clock-two__iframe"
+                src="https://clock-two.netlify.app/"
+                title="CLOCK 2"
+                allowtransparency="true"
+            ></iframe>
         </div>
         <?php
         echo $after_widget;
