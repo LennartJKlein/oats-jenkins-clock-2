@@ -9,7 +9,9 @@ Easy to use when you want to check what time it is!
 
 ## Wordpress plugin / widget
 
-1. [Download this .zip file](https://github.com/LennartJKlein/oats-jenkins-clock-2/blob/master/wordpress-plugin/clock-two-wp-widget-v1.0.0.zip?raw=true)
+(Latest version: 1.0.1)
+
+1. [Download this .zip file](https://github.com/LennartJKlein/oats-jenkins-clock-2/blob/master/wordpress-plugin/clock-two-wp-widget-v1.0.1.zip?raw=true)
 2. Go to the Plugins page in Wordpress
 3. Click 'Add plugin' > 'Upload plugin' and upload the .zip file
 4. Go to the Widgets page in Wordpress
