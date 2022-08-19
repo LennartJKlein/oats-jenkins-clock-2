@@ -46,6 +46,20 @@
   --color-link: var(--vt-c-blue-soft);
 }
 
+.is-iframe {
+  --color-background: transparent;
+  --color-background-soft: transparent;
+  --color-background-mute: transparent;
+
+  --color-border: var(--vt-c-divider-light-2);
+  --color-border-hover: var(--vt-c-divider-light-1);
+
+  --color-heading: var(--vt-c-text-light-1);
+  --color-text: var(--vt-c-text-light-1);
+  --color-description: var(--vt-c-text-light-2);
+  --color-link: var(--vt-c-blue);
+}
+
 *,
 *::before,
 *::after {
@@ -77,10 +91,6 @@ body {
   overflow: hidden;
   place-items: center;
   width: 100vw;
-
-  .is-frame & {
-    background: none transparent;
-  }
 }
 
 .credits {
